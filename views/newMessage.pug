@@ -3,3 +3,8 @@ extends layout
 block content
     h1= title
     p Welcome to newMessage #{title}
+    form(action='/added-message', method='POST')
+        input(type='text', name='author', placeholder='Name', value='')
+        input(type='text', name='message', placeholder='Message', value='')
+        input(type='submit', value='submit')
+
